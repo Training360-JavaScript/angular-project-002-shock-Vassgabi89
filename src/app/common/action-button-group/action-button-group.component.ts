@@ -13,15 +13,12 @@ export class ActionButtonGroupComponent implements OnInit {
 
   onSelectButtonClick(): void {
     this.selectClick.emit(true)
-    // console.log('select')
   }
   onUpdateButtonClick(): void {
     this.updateClick.emit(true)
-    // console.log('update')
   }
   onDeleteButtonClick(): void {
     this.deleteClick.emit(true)
-    // console.log('delete')
   }
 
   constructor() { }
