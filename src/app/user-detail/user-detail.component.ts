@@ -17,10 +17,12 @@ export class UserDetailComponent implements OnInit {
   @Input() user: User = new User();
   @Output() delUser: EventEmitter<User> = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
+
 
   /**
    * FELADAT!

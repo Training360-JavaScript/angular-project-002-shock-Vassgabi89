@@ -170,14 +170,18 @@ export class UserService {
 
   updateUser(user: User): void {
     const index = this.list.findIndex(item => item.id === user.id);
+    if (index > 0) {
     this.list.splice(index, 1, user);
     this.updateLocalStorage();
+    }
   }
 
   removeUser(user: User): void {
     const index = this.list.findIndex(item => item.id === user.id);
-    this.list.splice(index, 1);
-    this.updateLocalStorage();
+    if (index > 0) {
+      this.list.splice(index, 1);
+      this.updateLocalStorage();
+    }
   }
 
   updateLocalStorage(): void {
